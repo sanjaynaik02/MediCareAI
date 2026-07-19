@@ -25,10 +25,10 @@ export default function NavbarActions({ className }: NavbarActionsProps) {
         Emergency
       </Button>
 
-      <Button className="gap-2 bg-blue-500 hover:bg-blue-700 text-white">
+      {/* <Button className="gap-2 bg-blue-500 hover:bg-blue-700 text-white">
         <CalendarDays className="h-4 w-4" />
         Book Appointment
-      </Button>
+      </Button> */}
 
       <Button className="gap-2 bg-white hover:bg-gray-200 text-black">
         <LogIn className="h-4 w-4" />
