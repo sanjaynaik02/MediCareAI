@@ -1,7 +1,31 @@
-export const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Departments", href: "/departments" },
-  { name: "Doctors", href: "/doctors" },
-  { name: "Emergency", href: "/emergency" },
-  { name: "Contact", href: "/contact" },
+export interface NavigationLink {
+  label: string;
+  href: string;
+}
+
+export const navigationLinks: NavigationLink[] = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "Departments",
+    href: "/departments",
+  },
+  {
+    label: "Doctors",
+    href: "/doctors",
+  },
+  {
+    label: "Services",
+    href: "/services",
+  },
+  {
+    label: "About",
+    href: "/about",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
 ];
