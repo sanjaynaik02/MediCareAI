@@ -88,8 +88,8 @@ export default function Hero() {
         </div>
 
         {/* Right Content */}
-        <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-blue-100 via-white to-cyan-100 p-6 shadow-xl sm:p-8">
-          <div className="flex min-h-[430px] flex-col justify-between rounded-[1.5rem] border border-white/70 bg-white/80 p-6 backdrop-blur">
+        <div className="rounded-[2rem] border border-slate-200 bg-linear-to-br from-blue-100 via-white to-cyan-100 p-6 shadow-xl sm:p-8">
+          <div className="flex min-h-107.5 flex-col justify-between rounded-[1.5rem] border border-white/70 bg-white/80 p-6 backdrop-blur">
             <div>
               <div className="mb-4 inline-flex rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
                 Future Healthcare Illustration
