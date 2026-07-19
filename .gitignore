@@ -1,0 +1,12 @@
+client/node_modules/
+client/.next/
+
+.env
+.env.local
+
+*.log
+
+.vscode/
+
+.DS_Store
+Thumbs.db

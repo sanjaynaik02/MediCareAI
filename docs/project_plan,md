@@ -1,0 +1,77 @@
+# Hospital Management System
+
+## Vision
+
+Build a modern AI-powered Hospital Management Platform that improves patient experience, hospital efficiency, and healthcare accessibility.
+
+---
+
+## User Roles
+
+- Patient
+- Doctor
+- Receptionist
+- Nurse
+- Lab Technician
+- Pharmacist
+- Admin
+
+---
+
+## Modules
+
+### Public Website
+
+- Home
+- About
+- Departments
+- Doctors
+- Appointment Booking
+- Emergency
+- Contact
+- AI Assistant
+
+### Patient Dashboard
+
+- Profile
+- Medical History
+- Prescriptions
+- Reports
+- Appointments
+- Bills
+- Notifications
+
+### Doctor Dashboard
+
+- Patient List
+- Schedule
+- Prescriptions
+- Lab Reports
+- AI Report Summary
+
+### Reception Dashboard
+
+- Register Patient
+- Manage Queue
+- Book Appointment
+
+### Admin Dashboard
+
+- Manage Users
+- Departments
+- Doctors
+- Beds
+- Revenue
+- Analytics
+
+---
+
+## Future AI Features
+
+- AI Symptom Checker
+- Smart Queue Prediction
+- AI Medical Report Summary
+- Drug Interaction Checker
+- Live Bed Availability
+- Indoor Navigation
+- Voice Assistant
