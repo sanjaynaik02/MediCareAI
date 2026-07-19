@@ -1,9 +1,13 @@
-import Logo from "@/components/common/Logo";
+import Navbar from "@/components/layout/Navbar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-50">
-      <Logo />
-    </main>
+    <>
+      <Navbar />
+
+      <main className="min-h-screen">
+        {/* Hero section will go here */}
+      </main>
+    </>
   );
 }
