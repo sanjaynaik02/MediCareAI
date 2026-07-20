@@ -1,10 +1,5 @@
-import {
-  Search,
-  TriangleAlert,
-  CalendarDays,
-  LogIn,
-} from "lucide-react";
-
+import { Search, TriangleAlert, CalendarDays, LogIn } from "lucide-react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -30,9 +25,11 @@ export default function NavbarActions({ className }: NavbarActionsProps) {
         Book Appointment
       </Button> */}
 
-      <Button className="gap-2 bg-white hover:bg-gray-200 text-black">
-        <LogIn className="h-4 w-4" />
-        Login
+      <Button asChild className="h-11 gap-2 bg-white text-black hover:bg-gray-200">
+        <Link href="/login" className="flex items-center justify-center gap-2">
+          <LogIn className="h-4 w-4 relative top-px" />
+          <span>Login</span>
+        </Link>
       </Button>
     </div>
   );
