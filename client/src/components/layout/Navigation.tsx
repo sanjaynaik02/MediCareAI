@@ -9,10 +9,7 @@ interface NavigationProps {
 
 export default function Navigation({ className }: NavigationProps) {
   return (
-    <nav
-      aria-label="Primary"
-      className={cn("flex items-center", className)}
-    >
+    <nav aria-label="Primary" className={cn("flex items-center", className)}>
       <ul className="flex items-center gap-6">
         {navigationLinks.map((link) => (
           <li key={link.href}>

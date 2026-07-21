@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type LoginFormValues } from "../schemas/login.schema";
 import { useLogin } from "../hooks/useLogin";
-
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const form = useForm<LoginFormValues>({
@@ -23,13 +23,15 @@ export default function LoginForm() {
   });
 
   const { register, handleSubmit, control, formState: { errors } } = form;
-
+  const router = useRouter();
   const { login, isLoading } = useLogin();
 
 const onSubmit = async (data: LoginFormValues) => {
   const response = await login(data);
 
-  console.log(response);
+  if (response.success) {
+  router.replace("/dashboard");
+}
 };
 
   return (
