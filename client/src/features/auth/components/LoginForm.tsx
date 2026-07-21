@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type LoginFormValues } from "../schemas/login.schema";
+import { useLogin } from "../hooks/useLogin";
 
 
 export default function LoginForm() {
@@ -23,8 +24,12 @@ export default function LoginForm() {
 
   const { register, handleSubmit, control, formState: { errors } } = form;
 
+  const { login, isLoading } = useLogin();
+
 const onSubmit = async (data: LoginFormValues) => {
-  console.log("Login Data:", data);
+  const response = await login(data);
+
+  console.log(response);
 };
 
   return (
@@ -98,9 +103,13 @@ const onSubmit = async (data: LoginFormValues) => {
           </Link>
         </div>
 
-        <Button type="submit" className="w-full">
-          Login
-        </Button>
+<Button
+  type="submit"
+  className="w-full"
+  disabled={isLoading}
+>
+  {isLoading ? "Signing in..." : "Login"}
+</Button>
       </form>
 
       <p className="mt-6 text-center text-sm text-muted-foreground">
