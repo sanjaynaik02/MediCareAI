@@ -1,9 +1,9 @@
-package com.sanjay.hospital.management.dto;
+package com.sanjay.hospital.management.dto.response;
 
 public class TestResponse {
+
     private String message;
     private String status;
-    // These are instance variables (also called fields).
 
     public TestResponse(String message, String status) {
         this.message = message;
