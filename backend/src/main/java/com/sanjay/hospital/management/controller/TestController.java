@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sanjay.hospital.management.dto.request.PatientRequest;
 import com.sanjay.hospital.management.dto.response.TestResponse;
+
+import jakarta.validation.Valid;
+
 import com.sanjay.hospital.management.dto.response.PatientResponse;
 
 @RestController
@@ -33,8 +36,8 @@ public class TestController {
     }
 
     @PostMapping("/patients")
-    public ResponseEntity<PatientResponse> createPatient(
-        @RequestBody PatientRequest request
+public ResponseEntity<PatientResponse> createPatient(
+        @Valid @RequestBody PatientRequest request
 ) {
 
     System.out.println(request.getName());
@@ -43,12 +46,10 @@ public class TestController {
     System.out.println(request.getContactNumber());
     System.out.println(request.getGender());
 
-    PatientResponse response =
-            new PatientResponse(
-                    "Patient created successfully",
-                    "SUCCESS"
-            );
+    PatientResponse response = new PatientResponse();
+    response.setMessage("Patient created successfully");
+    response.setStatus("SUCCESS");
 
     return ResponseEntity.ok(response);
-}
+}   
 }
